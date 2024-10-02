@@ -1,0 +1,48 @@
+/* eslint-disable react/no-unescaped-entities */
+import React from "react";
+import Image from "next/image";
+import SocilalLink from "./SocilalLink";
+
+const Hero: React.FC = () => {
+  return (
+    <section className="container md:mt-28 flex flex-col md:flex-row justify-center items-center">
+      {/* Image */}
+      <div className="w-full md:w-1/2 p-4 flex justify-center md:justify-end order-1 md:order-2">
+        <Image
+          src="/images/hero.jpg"
+          width={640}
+          height={640}
+          alt="Ben"
+          className="rounded-full w-[350px] h-[350px] md:w-[300px] md:h-[300px] object-cover"
+        />
+      </div>
+
+      {/* Text */}
+      <div className="w-full md:w-1/2 text-center md:text-left p-4 order-2 md:order-1">
+        {/* Title */}
+        <h1 className="text-2xl md:text-2xl font-bold mb-4">
+          Bonjour, je suis Ben
+        </h1>
+
+        {/* Subtitle */}
+        <p className="text-xl md:text-2xl mb-8 text-green-500 uppercase font-black">
+          Développeur Full Stack
+        </p>
+
+        {/* Description */}
+        <p className="text-base md:text-lg mb-8">
+          Développeur Full Stack passionné, j'allie expertise front-end et
+          back-end pour créer des applications web modernes, intuitives et
+          performantes, avec un fort accent sur l'expérience utilisateur.
+        </p>
+
+        {/* Social Icons */}
+        <div className="flex justify-center md:justify-start space-x-6">
+          <SocilalLink />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
