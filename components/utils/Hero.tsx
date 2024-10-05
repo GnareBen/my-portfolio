@@ -5,27 +5,27 @@ import SocilalLink from "./SocilalLink";
 
 const Hero: React.FC = () => {
   return (
-    <section className="container min-h-screen mt-0 md:mt-28 xl:mt-0 flex flex-col md:flex-row justify-center items-center">
+    <section className="container min-h-screen mt-0 flex flex-col md:flex-row justify-center items-center">
       {/* Image */}
-      <div className="w-full md:w-1/2 p-4 flex justify-center md:justify-end order-1 md:order-2">
+      <div className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
         <Image
           src="/images/hero.jpg"
           width={1920}
           height={1080}
           alt="Ben"
-          className="rounded-full w-[350px] h-[350px] md:w-[300px] md:h-[300px] xl:w-[650px] xl:h-[650px] object-cover"
+          className="rounded-full w-[350px] h-[350px] md:w-[450px] md:h-[450px] xl:w-[650px] xl:h-[650px] object-cover"
         />
       </div>
 
       {/* Text */}
-      <div className="w-full md:w-1/2 text-center md:text-left p-4 order-2 md:order-1">
+      <div className="w-full p-4 md:w-1/2 text-center md:text-left order-2 md:order-1">
         {/* Title */}
-        <h1 className="text-2xl md:text-2xl xl:text-5xl font-bold mb-4">
+        <h1 className="text-2xl md:text-3xl xl:text-5xl font-bold mb-4">
           Bonjour, je suis Ben
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl xl:text-5xl mb-8 text-green-500 uppercase font-black">
+        <p className="text-xl md:text-3xl xl:text-6xl mb-8 text-green-500 uppercase font-bold">
           Développeur Full Stack
         </p>
 

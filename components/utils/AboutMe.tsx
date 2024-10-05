@@ -9,7 +9,7 @@ const AboutMe: React.FC = () => {
         À propos de moi
       </h2>
       {/* Information */}
-      <div className="mb-4 mt-0 md:mt-28 xl:mt-0 flex flex-col md:flex-row md:space-x-10 items-center">
+      <div className="mb-4 mt-0 flex flex-col md:flex-row md:space-x-10 items-center">
         {/* Image */}
         <div className="w-full md:w-1/2 p-4 flex justify-center md:justify-end order-1 md:order-1">
           <Image
@@ -17,13 +17,13 @@ const AboutMe: React.FC = () => {
             width={1920}
             height={1080}
             alt="Ben"
-            className="w-[350px] h-[350px] md:w-[300px] md:h-[300px] xl:w-[650px] xl:h-[650px] object-cover"
+            className="w-[350px] h-[350px] md:w-[450px] md:h-[450px] xl:w-[650px] xl:h-[650px] object-cover"
           />
         </div>
 
         {/* Description */}
         <div className="w-full md:w-1/2 text-center md:text-left p-4 order-2 md:order-2">
-          <p className="text-base md:text-lg xl:text-xl mb-8">
+          <p className="text-sm md:text-base xl:text-xl mb-8">
             <span className="font-bold italic">
               Développeur Full Stack avec 3 ans d'expérience
             </span>
