@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import React from "react";
 import {
@@ -9,8 +11,36 @@ import {
   Sheet,
 } from "@/components/ui/sheet";
 import { FaAlignJustify } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const NavbarMobile: React.FC = () => {
+
+   const links = [
+     {
+       name: "Home",
+       url: "#home",
+     },
+     {
+       name: "Services",
+       url: "#Services",
+     },
+     {
+       name: "About",
+       url: "#about",
+     },
+     {
+       name: "Projects",
+       url: "#projects",
+     },
+     {
+       name: "Contact",
+       url: "/contact",
+     },
+   ];
+
+   const currentPath = usePathname();
+
   return (
     <div className="flex justify-between items-center">
       <Sheet>
@@ -28,36 +58,18 @@ const NavbarMobile: React.FC = () => {
               <nav className="p-4">
                 <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                   <div className="space-y-4 md:space-y-0 md:space-x-8 font-bold">
-                    <a
-                      href="#home"
-                      className="block md:inline hover:text-green-700"
-                    >
-                      Home
-                    </a>
-                    <a
-                      href="#Services"
-                      className="block md:inline hover:text-green-700"
-                    >
-                      Services
-                    </a>
-                    <a
-                      href="#about"
-                      className="block md:inline hover:text-green-700"
-                    >
-                      About
-                    </a>
-                    <a
-                      href="#projects"
-                      className="block md:inline hover:text-green-700"
-                    >
-                      Projects
-                    </a>
-                    <a
-                      href="#contact"
-                      className="block md:inline hover:text-green-700"
-                    >
-                      Contact
-                    </a>
+                    {links.map((link) => (
+                      <Link
+                        key={link.name}
+                        href={link.url}
+                        scroll={true}
+                        className={`block md:inline transition-transform transform hover:scale-125 duration-500 hover:text-green-600 ${
+                          currentPath === link.url ? "text-green-600" : ""
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
                   </div>
                   <div className="mt-4 md:mt-0 space-y-4 md:space-y-0 md:space-x-4">
                     <Button className="w-full md:w-auto bg-green-500 hover:bg-green-700">

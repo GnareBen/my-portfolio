@@ -1,4 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Navbar: React.FC = () => {
@@ -21,9 +25,11 @@ const Navbar: React.FC = () => {
     },
     {
       name: "Contact",
-      url: "#contact",
+      url: "/contact",
     },
   ];
+
+  const currentPath = usePathname();
 
   return (
     <nav className="p-4">
@@ -31,13 +37,16 @@ const Navbar: React.FC = () => {
         <div className="text-6xl font-extrabold">Gnaré</div>
         <div className="space-x-8 font-bold">
           {links.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.url}
-              className="inline-block hover:text-green-600 transition-transform transform hover:scale-125 duration-500"
+              scroll={true}
+              className={`inline-block transition-transform transform hover:scale-125 duration-500 hover:text-green-600 ${
+                currentPath === link.url ? "text-green-600" : ""
+              }`}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="space-x-4">
