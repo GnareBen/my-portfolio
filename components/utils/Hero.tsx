@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-3xl xl:text-6xl mb-8 text-green-500 uppercase font-bold">
+        <p className="text-xl md:text-3xl xl:text-5xl mb-8 text-green-500 uppercase font-bold">
           Développeur Full Stack
         </p>
 
