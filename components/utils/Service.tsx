@@ -3,10 +3,8 @@ import {
   FaMobileAlt,
   FaNetworkWired,
   FaDatabase,
-  FaPalette,
   FaTasks,
   FaShieldAlt,
-  FaCloud,
 } from "react-icons/fa";
 
 const Service = () => {
