@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-6xl font-extrabold">Mon Portfolio</div>
+        <div className="text-6xl font-extrabold">Gnaré</div>
         <div className="space-x-8 font-bold">
           <a href="#home" className="hover:text-green-700">
             Home

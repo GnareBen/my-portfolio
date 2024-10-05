@@ -1,5 +1,11 @@
 import React from "react";
-import { FaDiscord, FaInstagram, FaLinkedin, FaTiktok, FaXTwitter } from "react-icons/fa6";
+import {
+  FaDiscord,
+  FaInstagram,
+  FaLinkedin,
+  FaTiktok,
+  FaXTwitter,
+} from "react-icons/fa6";
 import { Button } from "../ui/button";
 
 const SocilalLink = () => {
