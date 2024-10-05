@@ -1,6 +1,7 @@
 import React from "react";
 import {
   FaDiscord,
+  FaGithub,
   FaInstagram,
   FaLinkedin,
   FaTiktok,
@@ -13,12 +14,17 @@ const SocilalLink = () => {
     {
       name: "Github",
       url: "",
-      icon: <FaXTwitter className="h-16 w-16" />,
+      icon: <FaGithub className="h-16 w-16" />,
     },
     {
       name: "Linkedin",
       url: "",
       icon: <FaLinkedin className="h-16 w-16" />,
+    },
+    {
+      name: "X",
+      url: "",
+      icon: <FaXTwitter className="h-16 w-16" />,
     },
     {
       name: "Instagram",
@@ -46,7 +52,7 @@ const SocilalLink = () => {
           variant="outline"
           size="icon"
           key={socialLink.name}
-          className="text-black border-none hover:text-green-400"
+          className="text-green-600 border-none hover:text-green-800 transition-transform transform hover:scale-150 duration-500"
         >
           {socialLink.icon}
         </Button>
